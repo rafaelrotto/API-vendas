@@ -1,0 +1,8 @@
+npm i typescript ts-node-dev @types/node -D
+npm i tsconfig-paths -D
+tsc --init --rootDir src --outDir build --esModuleInterop --resolveJsonModule --lib es6 --module commonjs --allowJs true --noImplicitAny true
+tsc
+"dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts" 
+npm run dev
+npm i express cors express-async-errors
+npm i -D @types/express @types/cors
